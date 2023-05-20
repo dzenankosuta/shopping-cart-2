@@ -1,6 +1,6 @@
 .navbar {
   height: 15vh;
-  background-color: rgb(255, 226, 0);
+  background-color: #2e5b36;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,7 @@
 .activeStyles {
   padding: 10px;
   text-decoration: none;
-  background-color: rgb(255, 178, 83);
+  background-color: #d8ec81;
   border-radius: 15px;
   color: #000000;
 }
@@ -30,5 +30,5 @@
   padding: 10px;
   text-decoration: none;
   border-radius: 15px;
-  color: #000000;
+  color: #ffffff;
 }
