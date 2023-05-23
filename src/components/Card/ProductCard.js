@@ -9,7 +9,7 @@ export default function ProductCard({
   productName,
   productPrice,
   productImage,
-  onPress,
+  onClick,
 }) {
   return (
     <Card sx={{ width: 400, height: 450 }}>
@@ -38,7 +38,7 @@ export default function ProductCard({
             size="medium"
             variant="outlined"
             color="success"
-            onClick={onPress}
+            onClick={onClick}
           >
             Add to Cart
           </Button>
