@@ -26,7 +26,7 @@ export default function ProductCard({
       setIsAdded(false);
     }
   }, [id, cart]);
-  console.log({ isAdded });
+  // console.log({ isAdded });
 
   return (
     <Card sx={{ maxWidth: 450 }}>
