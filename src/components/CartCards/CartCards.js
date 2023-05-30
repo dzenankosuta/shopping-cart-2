@@ -16,33 +16,42 @@ export default function CartCards({
     <div className="cart-card">
       <img className="product-image" src={productImage} alt={productName} />
       <div className="product-details">
-        <h2 className="productName">Product: {productName}</h2>
-        <p className="productPrice">Price: {productPrice * quantity}$</p>
-        <p className="product-quantity">Quantity: {quantity}</p>
-        <div>
-          <DeleteButton
-            onDelete={() => {
-              deleteFromCart(id);
-            }}
-          />
+        <div className="product-name-div">
+          <h2 className="productName">{productName}</h2>
         </div>
-        <button
-          onClick={() => {
-            decrease(id);
+
+        <div className="product-adder">
+          <button
+            className="btn"
+            onClick={() => {
+              decrease(id);
+            }}
+            style={{ width: 30 }}
+          >
+            -
+          </button>
+          <div className="product-display">
+            <p className="productPrice">Price: {productPrice * quantity}$</p>
+            <p className="product-quantity">Quantity: {quantity}</p>
+          </div>
+          <button
+            className="btn"
+            onClick={() => {
+              increase(id);
+            }}
+            style={{ width: 30 }}
+          >
+            +
+          </button>
+          <div></div>
+        </div>
+
+        <DeleteButton
+          className="delete-btn"
+          onDelete={() => {
+            deleteFromCart(id);
           }}
-          style={{ width: 30 }}
-        >
-          -
-        </button>
-        <p></p>
-        <button
-          onClick={() => {
-            increase(id);
-          }}
-          style={{ width: 30 }}
-        >
-          +
-        </button>
+        />
       </div>
     </div>
   );

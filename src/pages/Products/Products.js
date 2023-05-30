@@ -3,24 +3,26 @@ import { AppContext } from "../../context/AppContext";
 import "./Products.css";
 import Pagination from "@mui/material/Pagination";
 import ProductCard from "../../components/Card/ProductCard";
-import { toast } from "react-hot-toast";
 
 export default function Products() {
-  const { products, addToCart, cart, deleteFromCart } = useContext(AppContext);
+  const { products, addToCart, deleteFromCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   const productsPerPage = 15;
-  const numOfPages = Math.ceil(products.length / productsPerPage);
+  const numOfPages = Math.ceil(
+    products.filter((product) => product.quantity <= 20).length /
+      productsPerPage
+  );
 
   console.log(products);
-  console.log(cart);
   return (
     <>
       <div className="cards">
         {products
+          .filter((product) => product.quantity <= 20)
           .map((product) => (
             <ProductCard
               key={product.id}
