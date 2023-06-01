@@ -24,8 +24,12 @@ export default function OnSale() {
               key={product.id}
               id={product.id}
               productName={product.title}
-              productPrice={product.price}
+              productPrice={
+                product.price -
+                (product.price * product.discountPercentage) / 100
+              }
               productImage={product.imageURL}
+              currencySign={"EUR"}
               addToCart={() => {
                 addToCart(product.id);
               }}

@@ -1,14 +1,22 @@
 .cart-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-out;
+  width: 70rem;
+  height: 200px;
 }
-
+.cart-cards-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .product-image {
   width: 80px;
   height: 80px;
@@ -22,6 +30,7 @@
   font-weight: 600;
   margin-bottom: 5px;
   color: #333333;
+  width: 10rem;
 }
 
 .productPrice {
@@ -53,44 +62,16 @@
 
 .cart-card {
   animation: fade-in 0.3s ease-out;
-  margin: 0.5rem 1rem 0.5rem 1rem;
-  padding: 0 1rem 0 1rem;
-  display: flex;
 }
 
 .cartIcon {
   margin-top: 5px;
 }
-
-.product-display {
-  width: 150px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  padding: 5px;
-  border-radius: 1rem;
+.btn-group {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 10px;
 }
-.product-adder {
-  display: flex;
-  align-items: center;
-  width: 30%;
-}
-.product-name-div {
-  width: 30%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.btn {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  cursor: pointer;
-  height: min-content;
+.clr-button {
+  float: right;
 }
