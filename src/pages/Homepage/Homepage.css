@@ -1,5 +1,6 @@
 .home-container {
-  background-image: url(https://www.thedailymeal.com/img/gallery/you-should-think-twice-about-bagging-your-own-groceries-at-the-store/l-intro-1681220544.jpg);
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
